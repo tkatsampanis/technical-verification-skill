@@ -1,0 +1,51 @@
+# Technical Verification — Operating Loop Visual
+
+```text
+      DEFINE
+         |
+         v
+      PLAN -------> CHECK INPUTS
+         |              |
+         v              v
+    SELECT MODEL    VERIFY
+         |              |
+         v              v
+      CALC/ANALYZE → SANITY CHECK
+         |
+         v
+     UPDATE STATE
+         |
+         v
+       REPORT
+```
+
+## Loop Description
+
+The technical verification operating loop follows a proportionate approach:
+
+1. **DEFINE** — Identify the technical claim that must be established or verified
+2. **PLAN** — Determine which framework sections apply and at what depth
+3. **CHECK INPUTS** — Verify all required inputs, units, assumptions are identified
+4. **SELECT MODEL** — Choose the governing equation or appropriate model
+5. **CALCULATE/ANALYZE** — Perform the calculation; check units AND dimensions
+6. **SANITY CHECK** — Verify magnitude, reasonableness, assumption validity
+7. **UPDATE STATE** — Maintain explicit verification state table (Section 19); record new evidence/changed assumptions/contradictions
+8. **VERIFY** — Check all required technical questions are sufficiently resolved
+9. **REPORT** — Report result with appropriate precision; state whether technical conditions satisfied
+
+## Key Principles
+
+- **Do the calculation rather than merely quoting a generic value from a source**
+- **Avoid false precision** — reported digits should reflect input quality
+- **Technical rigor means verifying the things that can make the answer wrong**
+- **For substantial technical work, do not merely collect calculations and sources**
+- **Maintain explicit questions, evidence, assumptions, contradictions, and completion conditions**
+- **A technical investigation is complete when required technical questions are answered sufficiently — not when every potentially interesting detail has been examined**
+
+## When to Use Each Verification Depth
+
+| Depth | Use Case |
+|---|---|
+| **Light** | Quick fact-check, well-known formula, low-stakes question |
+| **Moderate** | Most technical questions, new calculations, standard engineering |
+| **Substantial** | High-stakes engineering analysis, code-dependent work, novel models |

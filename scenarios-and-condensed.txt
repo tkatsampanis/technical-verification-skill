@@ -1,0 +1,73 @@
+# Technical Verification — Example Research Scenarios
+
+## Scenario 1: Simple Formula Query (Lightweight Tier)
+**User asks:** "What is the drag coefficient for a sphere at Reynolds number 10^5?"
+
+**Verification needed:**
+- Check authoritative definition of drag coefficient regime
+- Verify Reynolds number range applies
+- Confirm units are consistent (dimensionless)
+- No calculation required — source lookup suffices
+
+**Verdict:** Lightweight verification; check Section 1 for problem identification, Section 4 for unit consistency.
+
+---
+
+## Scenario 2: Engineering Calculation (Moderate Tier)
+**User asks:** "Calculate the pressure drop across a pipe flow with given parameters."
+
+**Verification needed:**
+- Identify governing equation (Darcy-Weisbach or Hagen-Poiseuille)
+- Verify input units (length, flow rate, viscosity, density)
+- Check units AND dimensions throughout calculation
+- Perform calculation; check magnitude sanity
+- Verify assumption of turbulent/laminar flow is valid for given Re
+- Confirm result precision reflects input quality
+
+**Verdict:** Moderate verification; full framework applies (Sections 1-21), maintain state table (Section 19).
+
+---
+
+## Scenario 3: Code-Dependent Technical Work (Substantial Tier)
+**User asks:** "Does this numerical simulation code produce physically valid results?"
+
+**Verification needed:**
+- Identify all governing equations in the code
+- Verify units consistency across all terms
+- Check boundary conditions and initial conditions
+- Validate assumptions (grid independence, convergence criteria)
+- Compare outputs against analytical solutions or experimental data
+- Maintain explicit verification state table throughout (Section 19)
+- Track all assumptions, contradictions, uncertainties
+- Do not continue analysis once all required technical questions are sufficiently resolved
+
+**Verdict:** Substantial verification; all 21+ sections apply, state tracking is mandatory.
+
+---
+
+## Scenario 4: Unit Conversion Question (Lightweight Tier)
+**User asks:** "Convert 50 psi to atmospheres and verify dimensional consistency."
+
+**Verification needed:**
+- Apply correct conversion factor (1 atm = 14.6959 psi)
+- Check that both units are pressure units (dimensional consistency)
+- Verify result precision is appropriate
+- Confirm no silent mixing of absolute/gauge pressure
+
+**Verdict:** Lightweight; primarily Section 4 (Units and Dimensions) and sanity check.
+
+---
+
+## Scenario 5: Contradictory Technical Results (High Complexity)
+**User asks:** "Two sources give different results for the same phenomenon. Which is correct?"
+
+**Verification needed:**
+- Identify the technical claim each source supports
+- Evaluate evidence quality for each source (original research > standards > docs)
+- Check whether assumptions are comparable or conflicting
+- Look for contradictions in the state table (Section 19)
+- Determine whether results operate in different regimes
+- Assess uncertainty ranges of each result
+- Weigh credibility and reach reasoned conclusion
+
+**Verdict:** Substantial; Sections 14 (Conflicting Results), 15 (Uncertainty), 19 (State Tracking) all essential.

@@ -1,0 +1,91 @@
+# Technical Verification — Quick-Start Cheat Sheet
+
+## The Operating Loop
+**DEFINE → PLAN → CHECK INPUTS → SELECT MODEL → CALCULATE/ANALYZE → UPDATE STATE → SANITY CHECK → VERIFY → REPORT**
+
+---
+
+## Key Questions at Each Step
+
+### DEFINE
+- What technical claim must be established or verified?
+- Does the user's answer materially depend on technical correctness?
+- How consequential would an incorrect answer be?
+
+### PLAN
+- Which sections of the verification framework apply?
+- What is the appropriate verification depth?
+  - Simple formula query: Authoritative definition may suffice
+  - Calculation required: Verify inputs, units, equation, and calculation
+  - Complex engineering analysis: Substantially deeper verification
+
+### CHECK INPUTS
+- Are all required inputs identified and verified?
+- Which inputs need source validation?
+- What assumptions are being made implicitly vs explicitly?
+
+### SELECT MODEL
+- Which governing equation or model applies?
+- Is the model appropriate for the regime (laminar/turbulent, low/high Re, etc.)?
+- What are the model's limitations and valid ranges?
+
+### CALCULATE/ANALYZE
+- Perform the calculation rather than quoting a generic value
+- Check units AND dimensions (not just units)
+- Check magnitude and sanity of result
+- After calculation: explicitly record whether result satisfies required technical conditions
+
+### UPDATE STATE
+- Maintain explicit verification state using the planning state table
+- Update question/status/evidence/assumptions after each step
+- Record contradictions, uncertainties, remaining actions
+
+### SANITY CHECK
+- Verify magnitude is reasonable for the context
+- Check whether assumptions remain valid
+- Perform independent or alternative calculation if needed
+
+### VERIFY
+- All required technical questions sufficiently resolved?
+- No essential evidence gap remains?
+- Material uncertainties communicated?
+- Contradictions resolved or reported?
+
+### REPORT
+- Report result with appropriate precision (reflects input quality)
+- State whether technical conditions are satisfied
+- Do not add complexity for its own sake
+
+---
+
+## Verification Depth Reference
+
+| Complexity | What to Verify | When to Use |
+|---|---|---|
+| **Simple** | Authoritative definition may suffice | Quick fact-check, well-known formula |
+| **Medium** | Verify inputs, units, equation, calculation | Most technical questions, new calculations |
+| **Substantial** | Deep verification of assumptions, models, constraints, evidence | High-stakes engineering, code-dependent work |
+
+---
+
+## Status Definitions (Section 19)
+
+- **Open** — required claim remains unresolved
+- **Established** — strong evidence directly supports the claim
+- **Verified** — confirmed through independent check or calculation
+- **Assumed** — information temporarily assumed rather than established
+- **Uncertain** — meaningful uncertainty remains despite evidence
+- **Contradicted** — credible evidence conflicts with the claim
+- **Blocked** — required information cannot currently be established
+- **Not Needed** — this question does not apply to the current task
+
+---
+
+## Key Formula: Units & Dimensions
+
+**Step 3: check units and dimensions**
+
+Dimensional consistency is necessary but not sufficient for correctness.
+An incorrect equation can still be dimensionally consistent.
+
+Treat unresolved dimensional inconsistency as a verification failure.

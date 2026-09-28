@@ -1,0 +1,55 @@
+# Technical Verification — Quick Reference Index
+
+## Core Sections (1-21 + Core Rule)
+
+### Sections 1-5: Problem Identification & Foundation
+1. Identify the Technical Problem
+2. Verify vs. Validate
+3. Verify Inputs and Conditions
+4. Units and Dimensions
+5. Equations, Models, and Valid Regimes
+
+### Sections 6-8: Computation & Physical Systems
+6. Computational Execution
+7. Mathematical Derivations and Proofs
+8. Invariants and Conservation Laws
+
+### Sections 9-12: Engineering & Scientific Analysis
+9. Engineering and Physical-System Analysis
+10. Scientific and Experimental Claims
+11. Technical Literature and External Evidence
+12. Code and Technical Implementation
+
+### Sections 13-15: Sanity, Conflict & Uncertainty
+13. Active Sanity, Boundary, and Limiting Checks
+14. Conflicting Technical Results
+15. Uncertainty, Sensitivity, and False Precision
+
+### Sections 16-21: Escalation & Final Check
+16. Missing Information
+17. Adversarial Failure Analysis
+18. Proportionate Verification Depth
+19. Technical Verification State [markdown table + 8 statuses]
+20. Research and Verification Escalation
+21. Final Technical Check
+
+### Core Rule (Post-Section 21)
+> Technical rigor means verifying the things that can make the answer wrong.
+> Do not perform additional technical work merely because more analysis is possible.
+> Use the minimum technical analysis necessary to establish a reliable result.
+
+## How This Skill Works
+
+**Import this skill via Hermes Agent** when your answer materially depends on:
+- Equations and mathematical models
+- Numerical calculations or simulations  
+- Units, dimensions, and conversions
+- Assumptions and boundary conditions
+- Code-dependent technical work
+
+**Verification depth is proportionate:**
+- Simple queries: Check authoritative definitions
+- Medium queries: Full input/unit/model/calculation verification
+- Substantial tasks: Maintain explicit state table (Section 19), track all questions/evidence/assumptions
+
+**Completion condition:** All required technical questions are answered sufficiently — not when every potentially interesting detail has been examined.
